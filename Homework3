@@ -1,0 +1,88 @@
+<?php
+$arr = [1, 2, 3, 7, 31, 4, 1, 8, 6];
+var_dump (count($arr));
+?>
+
+
+<?php
+$arr = [1, 2, 3, 7, 31, 4, 1, 8, 6];
+$first = array_shift($arr);
+$second = array_shift($arr);
+$third = array_shift($arr);
+$fourth = array_shift($arr);
+array_push($arr, $first, $second, $third, $fourth);
+var_dump ($arr);
+?>
+
+
+<?php
+$arr = [1, 2, 3, 7, 31, 4, 1, 8, 6];
+$sum = array_sum(array_slice($arr, 3, 5));
+var_dump ($sum);
+?>
+
+
+
+
+
+
+
+<?php
+$firstArr = [
+  'one' => 1,
+  'two' => 2,
+  'three' => 3,
+  'four' => 5,
+  'five' => 12,
+];
+
+$secondArr = [
+  'one' => 1,
+  'seven' => 22,
+  'three' => 32,
+  'four' => 5,
+  'five' => 13,
+  'six' => 37,
+];
+
+$result1 = array_diff($secondArr, $firstArr);
+print_r ($result1);
+
+$result2 = array_diff($firstArr, $secondArr);
+print_r ($result2);
+
+$result3 = array_intersect($firstArr, $secondArr);
+print_r ($result3);
+?>
+
+
+
+
+
+
+
+
+<?php
+$firstArr = [
+  'one' => 1,
+  'two' => [
+    'one' => 1,
+  'seven' => 22,
+  'three' => 32,
+  ],
+  'three' => [
+'one' => 1,
+'two' => 2,
+  ],
+  'four' => 5,
+  'five' => [
+   'three' => 32,
+   'four' => 5,
+   'five' => 12,
+],  
+];
+
+$sum = array_sum(array_slice($firstArr));
+var_dump ($sum);
+
+?>
